@@ -1,0 +1,9 @@
+great='你好，吃了么，'
+great_chinese=great
+great='Hello,SB,'
+print(great+'张三')
+print(great+'李四')
+print(great+'王五')
+print(great_chinese+'张三')
+print(great_chinese+'李四')
+print(great_chinese+'王五')
