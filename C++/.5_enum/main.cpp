@@ -8,25 +8,26 @@ int main() {
         BLUE
     };
 
-    cout << "ä½ å–œæ¬¢ä»€ä¹ˆé¢œè‰²ï¼Ÿ1çº¢è‰²ï¼Œ2é»„è‰²ï¼Œ3è“è‰²" << endl;
+    cout << "ÄãÏ²»¶Ê²Ã´ÑÕÉ«£¿1ºìÉ«£¬2»ÆÉ«£¬3À¶É«" << endl;
     int num;
     cin >> num;
 
-    cout << "ä½ å–œæ¬¢";
+    cout << "ÄãÏ²»¶";
     switch (num) {
         case RED:
-            cout << "çº¢è‰²";
+            cout << "ºìÉ«";
             break;
         case YELLOW:
-            cout << "é»„è‰²";
+            cout << "»ÆÉ«";
             break;
         case BLUE:
-            cout << "è“è‰²";
+            cout << "À¶É«";
             break;
         default:
-            cout << "åˆ«çš„é¢œè‰²";
+            cout << "±ðµÄÑÕÉ«";
     }
-    cout << "å•Šï¼" << endl;
+    cout << "°¡£¡" << endl;
     
+    system ("pause");
     return 0;
 }

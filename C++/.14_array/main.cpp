@@ -13,7 +13,6 @@ int get_random_num (int min, int max) {
 int main() {
     int right = 0;
     int num = get_random_num(1, 10);
-    cout << num << endl;
     int guess_num[10];
     for (int count = 0; count < 10; count++) {
         cout << ++count << ".ÇëÊäÈëÊı×Ö(1-10): ";
