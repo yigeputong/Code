@@ -15,8 +15,9 @@ int main() {
     int num = get_random_num(1, 10);
     cout << num << endl;
     int guess_num[10];
-    for (int count = 1; count < 11; count++) {
-        cout << count << ".ÇëÊäÈëÊı×Ö(1-10): ";
+    for (int count = 0; count < 10; count++) {
+        cout << ++count << ".ÇëÊäÈëÊı×Ö(1-10): ";
+        count--;
         cin >> guess_num[count];
         if (num == guess_num[count]) {
             right++;
