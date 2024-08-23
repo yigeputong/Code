@@ -13,21 +13,21 @@ int get_random_num(int min, int max) {
 int main() {
     int money = 10000;
     for (int id = 1; id <= 20; id++) {
-        count_salary = get_random_num(1, 10);
+        int count_salary = get_random_num(1, 10);
         cout << count_salary;
-        if (salary = 0) {
-            cout << "¹¤×Ê·¢ÍêÁË£¬ÏÂ¸öÔÂÁìÈ¡°É¡£" << endl;
+        if (money = 0) {
+            cout << "å·¥èµ„å‘å®Œäº†ï¼Œä¸‹ä¸ªæœˆé¢†å–å§ã€‚" << endl;
             break;
         }
         if (count_salary < 5) {
-            cout << "Ô±¹¤" << count << "£¬¼¨Ğ§·Ö" << count_salary << "£¬µÍÓÚ5£¬²»·¢¹¤×Ê£¬ÏÂÒ»Î»¡£" << endl;
+            cout << "å‘˜å·¥" << id << "ï¼Œç»©æ•ˆåˆ†" << count_salary << "ï¼Œä½äº5ï¼Œä¸å‘å·¥èµ„ï¼Œä¸‹ä¸€ä½ã€‚" << endl;
             continue;
         } else {
-            salary = salary - 1000;
-            cout << "ÏòÔ±¹¤" << count << "·¢·Å¹¤×Ê1000Ôª£¬ÕË»§Óà¶î»¹Ê£Óà" << salary << "Ôª¡£" << endl;
+            money = money - 1000;
+            cout << "å‘å‘˜å·¥" << id << "å‘æ”¾å·¥èµ„1000å…ƒï¼Œè´¦æˆ·ä½™é¢è¿˜å‰©ä½™" << money << "å…ƒã€‚" << endl;
         }
     }
-    cout << "¹¤×Ê·¢ÍêÁË£¬ÏÂ¸öÔÂÁìÈ¡°É¡£" << endl;
+    cout << "å·¥èµ„å‘å®Œäº†ï¼Œä¸‹ä¸ªæœˆé¢†å–å§ã€‚" << endl;
 
     system ("pause");
     return 0;
