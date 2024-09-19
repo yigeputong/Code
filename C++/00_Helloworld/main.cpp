@@ -1,9 +1,7 @@
 #include <iostream>
-using namespace std;
 
 int main() {
-    int * pArr = new int[6] {1,2,3,4,5,6};
-    
+    std::cout << "Hello world!" << std::endl;
 
     system ("pause");
     return 0;
