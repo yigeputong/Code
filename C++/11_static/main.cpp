@@ -1,11 +1,16 @@
 #include <iostream>
-using namespace std;
+#include "static.cpp"
+using namespace std; 
 
-static int s_variable = 5;  
+//   int s_variable = 10;   <- 不行
+extern int s_variable;
+
+extern void fuction();
 
 int main() {
+    fuction();
+    cout << s_variable << endl;
 
-
-    system("pause");
+    cin.get();
     return 0;
 }

@@ -1,21 +1,16 @@
 #include <iostream>
 #include <string>
-#include <stdexcept>  // 用于 std::invalid_argument
+#include <stdexcept>
 
-/**
- * 日志类，用于记录不同级别的日志信息
- */
 class Log {
 private:
     int m_Loglevel = LogLevelInfo;  // 默认日志级别为 INFO
 
 public:
-    // 日志级别常量
     const int LogLevelError = 0;
     const int LogLevelWarning = 1;
     const int LogLevelInfo = 2;
 
-    // 构造函数，初始化日志级别为 INFO
     Log() : m_Loglevel(LogLevelInfo) {}
 
     // 设置日志级别
@@ -42,12 +37,6 @@ public:
     }
 };
 
-/**
- * 设置日志级别
- * 
- * @param log 日志对象
- * @param level 日志级别字符串
- */
 void setLogLevel(Log& log, const std::string& level) {
     try {
         if (level == "ERROR") {
@@ -64,13 +53,6 @@ void setLogLevel(Log& log, const std::string& level) {
     }
 }
 
-/**
- * 主函数
- * 
- * @param argc 命令行参数数量
- * @param argv 命令行参数数组
- * @return 执行结果字符串
- */
 std::string main(int argc, char* argv[]) {
     if (argc < 3) {
         std::cout << "用法: log 消息等级(0=ERROR, 1=WARNING, 2=INFO) \"消息\"" << std::endl;
