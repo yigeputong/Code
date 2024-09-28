@@ -8,7 +8,7 @@ int c = 2;
 enum Example : unsigned char //默认为int
 {
     A,//第一个默认为0
-    B,
+    B = 65,
     C
     //默认从第一个开始递增
 };
@@ -19,9 +19,13 @@ int main()
 
     Example value = B; //只能等于A,B,C其中一个
 
-    if (value = B)
+    if (value == 1)
     {
-        //Do something
+        cout << "value is 1" << endl;
+    }
+    else
+    {
+        cout << "value is " << value << endl;
     }
 
     system("pause");
