@@ -6,7 +6,7 @@ class Entity
 public:
     float X,Y;
 
-    Entity()     //构造函数是每次实例化对象时运行的函数
+    Entity()     //构造函数是每次实例化对象时运行的函数，函数名必须与类名相同
     {
 
     }
