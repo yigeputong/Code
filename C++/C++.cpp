@@ -7,8 +7,7 @@ int main()
 
     //Code here
 
-    //cout << "请按回车以继续..." << endl;
+    //cout << "Press any key to continue... ";
     //cin.get();
-    //system("pause");
     return 0;
 }
