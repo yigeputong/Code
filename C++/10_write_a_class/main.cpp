@@ -33,7 +33,7 @@ int main() {
     Log log;
     string LogLevel;
     do {
-        cout << "ÇëÊäÈëÈÕÖ¾¼¶±ð(ERROR/WARNING/INFO)£º";
+        cout << "è¯·è¾“å…¥æ—¥å¿—çº§åˆ«(ERROR/WARNING/INFO)ï¼š";
         cin >> LogLevel;
         if (LogLevel == "ERROR"){
             log.SetLevel(log.LogLevelError);
@@ -42,13 +42,14 @@ int main() {
         } else if (LogLevel == "INFO"){
             log.SetLevel(log.LogLevelInfo);
         } else {
-            cout << "ÊäÈëÓÐÎó£¬ÇëÖØÐÂÊäÈë£¡" << endl;
+            cout << "è¾“å…¥æœ‰è¯¯ï¼Œè¯·é‡æ–°è¾“å…¥ï¼" << endl;
         }
     } while (LogLevel != "ERROR" && LogLevel != "WARNING" && LogLevel != "INFO");
     log.Warn("Hello!");
     log.Error("Hello!");
     log.Info("Hello!");
 
-    system("pause");
+    cout << "Press Enter to continue... ";
+    cin.get();   
     return 0;
 }

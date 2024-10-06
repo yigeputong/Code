@@ -8,6 +8,7 @@ int main() {
     *ptr = 10;//*ptr = var; ptr = var 的内存地址
     cout << var << endl;//var = 10
 
-    system("pause");
+    cout << "Press Enter to continue... ";
+    cin.get();   
     return 0;
 }

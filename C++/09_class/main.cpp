@@ -17,6 +17,9 @@ public:
 int main() {
     Player player;
     player.move(1, -1);
+    cout << player.x << ", " << player.y << endl;
 
+    cout << "Press Enter to continue... ";
+    cin.get();   
     return 0;
 }

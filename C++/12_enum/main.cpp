@@ -28,6 +28,7 @@ int main()
         cout << "value is " << value << endl;
     }
 
-    system("pause");
+    cout << "Press Enter to continue... ";
+    cin.get();   
     return 0;
 }

@@ -30,6 +30,7 @@ int main()
     Entity e(10.0f,5.0f);
     e.Print();
 
-    system("pause");
+    cout << "Press Enter to continue... ";
+    cin.get();   
     return 0;
 }

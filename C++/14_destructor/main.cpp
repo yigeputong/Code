@@ -37,6 +37,7 @@ int main()
 
     Function();
 
-    system("pause");
+    cout << "Press Enter to continue... ";
+    cin.get();   
     return 0;
 }

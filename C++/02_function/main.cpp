@@ -12,6 +12,7 @@ int main() {
     mulpitly_and_log(58,2);
     mulpitly_and_log(3,90);
 
-    system ("pause");
+    cout << "Press Enter to continue... ";
+    cin.get();   
     return 0;
 }

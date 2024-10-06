@@ -45,6 +45,7 @@ int main()
     Singleton::Get().Hello();
 
 
-    system("pause");
+    cout << "Press Enter to continue... ";
+    cin.get();   
     return 0;
 }

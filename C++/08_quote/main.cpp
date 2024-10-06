@@ -17,6 +17,7 @@ int main() {
     increment(b);
     cout << b << endl;
 
-    system("pause");
+    cout << "Press Enter to continue... ";
+    cin.get();   
     return 0;
 }

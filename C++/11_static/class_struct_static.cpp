@@ -25,7 +25,7 @@ int main()
     e.Print();
     e1.Print();
 
-    cout << "请按回车以继续..." << endl; 
-    cin.get();
+    cout << "Press Enter to continue... ";
+    cin.get();   
     return 0;
 }

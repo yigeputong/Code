@@ -34,6 +34,7 @@ int main()
     player.Move(5.0f, 1.14f); //继承了父类的 Move 函数
     player.X = 3.14f; //继承了父类的 X 变量
     
-    system("pause");
+    cout << "Press Enter to continue... ";
+    cin.get();   
     return 0;
 }

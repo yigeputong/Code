@@ -11,6 +11,7 @@ int main() {
     fuction();
     cout << s_variable << endl;
 
-    cin.get();
+    cout << "Press Enter to continue... ";
+    cin.get();   
     return 0;
 }

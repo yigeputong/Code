@@ -19,10 +19,11 @@ int main() {
      */
 
     short variable = 8;
-    wcout << variable << endl;
+    cout << variable << endl;
     variable = 20;
-    wcout << variable << endl;
+    cout << variable << endl;
 
-    system ("pause");
+    cout << "Press Enter to continue... ";
+    cin.get();   
     return 0;
 }
