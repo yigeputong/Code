@@ -5,7 +5,7 @@ int main()
 {
     //Code here
 
-    cout << "Press any key to continue... ";
+    cout << "Press Enter to continue... ";
     cin.get();
     return 0;
 }

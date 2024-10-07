@@ -6,12 +6,25 @@ void print(const char* message) {
 }
 
 int main() {
-	int x = 5;
-	bool x5 = x == 5;
-	if (x5) {
+	int x = 6;
+	if (x == 5) {
 		print("x = 5");
+	} else if (x == 6) {
+		print("x = 6");
+	} else {
+		cout << "x is " << x << endl;
 	}
+	//if可以这样写
+		if (1 == 1) {
+			print("1 = 1");
+		}
+	//只有一行可以这样写
+		if (2 == 2) print("2 = 2");
 
-	system("pause");
-	return 0;
+		if (3 == 3)
+			print("3 = 3");
+
+    cout << "Press Enter to continue... ";
+    cin.get();
+    return 0;
 }
