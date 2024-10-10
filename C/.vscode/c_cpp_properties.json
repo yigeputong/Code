@@ -1,7 +1,6 @@
 {
     "configurations": [
         {
-<<<<<<< HEAD
             "name": "Win32",
             "includePath": [
                 "${workspaceFolder}/**"
@@ -17,39 +16,19 @@
             "intelliSenseMode": "windows-gcc-x64"
         },
         {
-=======
->>>>>>> d9c326fa23776d5484886f6ba82a72fe3dd69446
             "name": "Linux",
             "includePath": [
                 "${workspaceFolder}/**"
             ],
-<<<<<<< HEAD
             "defines": [
                 "_DEBUG",
                 "UNICODE",
                 "_UNICODE"
             ],
-=======
-            "defines": [],
->>>>>>> d9c326fa23776d5484886f6ba82a72fe3dd69446
             "compilerPath": "/usr/bin/gcc",
             "cStandard": "gnu23",
             "cppStandard": "gnu++23",
             "intelliSenseMode": "linux-gcc-x64"
-<<<<<<< HEAD
-=======
-        },
-        {
-            "name": "Win32",
-            "includePath": [
-                "${workspaceFolder}/**"
-            ],
-            "defines": [],
-            "compilerPath": "E:\\mingw64\\bin\\gcc.exe",
-            "cStandard": "gnu23",
-            "cppStandard": "gnu++23",
-            "intelliSenseMode": "windows-gcc-x64"
->>>>>>> d9c326fa23776d5484886f6ba82a72fe3dd69446
         }
     ],
     "version": 4
