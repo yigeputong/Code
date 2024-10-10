@@ -1,43 +1,27 @@
 {
     "tasks": [
         {
-            "type": "cppbuild",
-            "label": "g++ 生成活动文件(Windows)",
-            "command": "E:\\mingw64\\bin\\g++.exe",
-            "args": ["g++ -fdiagnostics-color=always ${file} -o ${fileDirname}\\${fileBasenameNoExtension}.exe -ggdb"],
-            "options": {
-                "cwd": "${fileDirname}"
-            },
+            "type": "shell",
+            "label": "C++: g++ 编译程序(Linux)",
+            "command": "g++ -fdiagnostics-color=always ${file} -o ${fileDirname}\\${fileBasenameNoExtension}.run -ggdb",
             "problemMatcher": ["$gcc"]
         },
         {
-            "type": "cppbuild",
-            "label": "g++ 生成活动文件(Linux)",
-            "command": "/usr/bin/g++",
-            "args": ["g++ -fdiagnostics-color=always ${file} -o ${fileDirname}\\${fileBasenameNoExtension}.run -ggdb"],
-            "options": {
-                "cwd": "${fileDirname}"
-            },
+            "type": "shell",
+            "label": "C++: g++ 编译程序(Windows)",
+            "command": "g++ -fdiagnostics-color=always ${file} -o ${fileDirname}\\${fileBasenameNoExtension}.exe -ggdb",
             "problemMatcher": ["$gcc"]
         },
         {
-            "type": "cppbuild",
-            "label": "g++ 生成活动文件(Windows, 优化)",
-            "command": "E:\\mingw64\\bin\\g++.exe",
-            "args": ["g++ -fdiagnostics-color=always ${file} -o ${fileDirname}\\${fileBasenameNoExtension}.exe -ggdb -O3"],
-            "options": {
-                "cwd": "${fileDirname}"
-            },
+            "type": "shell",
+            "label": "C++: g++ 编译程序(Linux优化)",
+            "command": "g++ -fdiagnostics-color=always ${file} -o ${fileDirname}\\${fileBasenameNoExtension}.run -ggdb -O3",
             "problemMatcher": ["$gcc"]
         },
         {
-            "type": "cppbuild",
-            "label": "g++ 生成活动文件(Linux, 优化)",
-            "command": "/usr/bin/g++",
-            "args": ["g++ -fdiagnostics-color=always ${file} -o ${fileDirname}\\${fileBasenameNoExtension}.run -ggdb -O3"],
-            "options": {
-                "cwd": "${fileDirname}"
-            },
+            "type": "shell",
+            "label": "C++: g++ 编译程序(Windows优化)",
+            "command": "g++ -fdiagnostics-color=always ${file} -o ${fileDirname}\\${fileBasenameNoExtension}.exe -ggdb -O3",
             "problemMatcher": ["$gcc"]
         }
     ],
