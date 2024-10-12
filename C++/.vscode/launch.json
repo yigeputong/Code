@@ -2,10 +2,10 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "(gdb) 启动(Windows)",
+            "name": "(gdb) 启动(Linux)",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
+            "program": "${fileDirname}\\${fileBasenameNoExtension}.run",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${fileDirname}",
@@ -26,10 +26,10 @@
             ]
         },
         {
-            "name": "(gdb) 启动(Linux)",
+            "name": "(gdb) 启动(Windows)",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${fileDirname}\\${fileBasenameNoExtension}.run",
+            "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${fileDirname}",

@@ -11,18 +11,6 @@
             "label": "C++: g++ 编译程序(Windows)",
             "command": "g++ -fdiagnostics-color=always ${file} -o ${fileDirname}\\${fileBasenameNoExtension}.exe -ggdb",
             "problemMatcher": ["$gcc"]
-        },
-        {
-            "type": "shell",
-            "label": "C++: g++ 编译程序(Linux优化)",
-            "command": "g++ -fdiagnostics-color=always ${file} -o ${fileDirname}\\${fileBasenameNoExtension}.run -ggdb -O3",
-            "problemMatcher": ["$gcc"]
-        },
-        {
-            "type": "shell",
-            "label": "C++: g++ 编译程序(Windows优化)",
-            "command": "g++ -fdiagnostics-color=always ${file} -o ${fileDirname}\\${fileBasenameNoExtension}.exe -ggdb -O3",
-            "problemMatcher": ["$gcc"]
         }
     ],
     "version": "2.0.0"
