@@ -83,7 +83,7 @@ int main()
     //(2)因为数组本质是一个指针，下标就是指针的偏移量，所以可以把一个数组赋值给一个指针来控制内存
     int* ptr = example; 
     cout << ptr << endl;
-    auto ptr2 = ptr + 2;
+    int* ptr2 = ptr + 2;
     *ptr2 = 9;
     printArray(example, 5);
     *(ptr + 3) = 8; //(3)偏移3个int，就和 exmple[3] = 8; 一样
