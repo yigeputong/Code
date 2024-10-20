@@ -5,9 +5,6 @@
             "type": "shell",
             "label": "g++ 生成优化程序(.run)",
             "command": "g++ -fdiagnostics-color=always -std=c++23 -O2 ${file} -o ${fileDirname}/${fileBasenameNoExtension}.run",
-            "options": {
-                "cwd": "~/Code/C++"
-            },
             "problemMatcher": [
                 "$gcc"
             ],
@@ -34,9 +31,6 @@
             "type": "shell",
             "label": "g++ 生成可调试程序(.run)",
             "command": "g++ -fdiagnostics-color=always -ggdb -std=c++23 ${file} -o ${fileDirname}/${fileBasenameNoExtension}_debug.run",
-            "options": {
-                "cwd": "~/Code/C++"
-            },
             "problemMatcher": [
                 "$gcc"
             ],

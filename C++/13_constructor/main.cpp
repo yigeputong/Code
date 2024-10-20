@@ -26,8 +26,6 @@ public:
 
 int main()
 {
-    system("chcp 65001");
-
     Entity e(10.0f,5.0f);
     e.Print();
 

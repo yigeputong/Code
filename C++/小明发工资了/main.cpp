@@ -19,6 +19,7 @@ int main()
     }
     cout << "===========================================" << endl;
 
-    system ("pause");
+    cerr << "Press Enter to exit... ";
+    cin.get();
     return 0;
 }

@@ -14,6 +14,8 @@ int main() {
     cout << "\\\'\t代表一个单引号 \'" << endl;
     cout << "\\\"\t代表一个双引号 \"" << endl;
     cout << "\\?\t代表一个问号 \?" << endl;
-    system("pause");
+    
+    cerr << "Press Enter to exit... ";
+    cin.get();
     return 0;
 }

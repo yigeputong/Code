@@ -1,4 +1,4 @@
-/11_2_类和结构体中的静态
+//11_2_类和结构体中的静态
 #include <iostream>
 using namespace std;
 
@@ -15,8 +15,6 @@ struct Entity
 
 int main()
 {
-    system ("chcp 65001");
-
     Entity e;
     e.x = 2;
     e.y = 3;
