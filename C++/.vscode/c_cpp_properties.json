@@ -10,10 +10,25 @@
                 "UNICODE",
                 "_UNICODE"
             ],
-            "compilerPath": "E:\\mingw64\\bin\\gcc.exe",
-            "cStandard": "c17",
-            "cppStandard": "c++98",
+            "compilerPath": "E:\\mingw64\\bin\\g++.exe",
+            "cStandard": "gnu23",
+            "cppStandard": "gnu++23",
             "intelliSenseMode": "windows-gcc-x64"
+        },
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/**"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ],
+            "cStandard": "gnu23",
+            "cppStandard": "gnu++23",
+            "intelliSenseMode": "linux-gcc-x64",
+            "compilerPath": "/usr/bin/g++"
         }
     ],
     "version": 4
