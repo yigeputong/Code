@@ -16,8 +16,6 @@ enum Example : unsigned char //默认为int
 
 int main()
 {
-    system("chcp 65001");
-
     Example value = B; //只能等于A,B,C其中一个
 
     if (value == 1)

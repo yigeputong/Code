@@ -34,8 +34,6 @@ void Function()
 
 int main()
 {
-    system("chcp 65001");
-
     Function();
 
     cout << "Press Enter to continue... ";

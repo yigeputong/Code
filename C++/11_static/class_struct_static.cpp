@@ -15,8 +15,6 @@ struct Entity
 
 int main()
 {
-    system ("chcp 65001");
-
     Entity e;
     e.x = 2;
     e.y = 3;

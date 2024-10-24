@@ -34,9 +34,6 @@ class Singleton
 
 int main()
 {
-    system("chcp 65001");
-
-
     Function();
     Function();
     Function();
