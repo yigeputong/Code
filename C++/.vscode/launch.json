@@ -1,11 +1,12 @@
 {
     "configurations": [
+
         {
             // 适用于 Linux
             "name": "(gdb) 启动(.run)",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${fileDirname}/${fileBasenameNoExtension}.run",
+            "program": "${fileDirname}/${fileBasenameNoExtension}_debug.run",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${fileDirname}",
@@ -31,11 +32,9 @@
             "name": "(gdb) 启动(.exe)",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
-            "args": [],
+            "program": "${fileDirname}\\${fileBasenameNoExtension}_debug.exe",
             "stopAtEntry": false,
-            "cwd": "${fileDirname}",
-            "environment": [],
+            "cwd": "E:\\Code\\C++",
             "externalConsole": false,
             "MIMode": "gdb",
             "miDebuggerPath": "E:\\mingw64\\bin\\gdb.exe",
