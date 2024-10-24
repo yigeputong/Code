@@ -1,4 +1,4 @@
-/11_2_类和结构体中的静态
+//11_2_类和结构体中的静态
 #include <iostream>
 using namespace std;
 
