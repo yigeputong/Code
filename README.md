@@ -1,18 +1,19 @@
 这是我用来学习的仓库
+# 文件说明
+> .run: Linux系统下的程序
+> .exe: Windows系统下的程序
+> main: 主要的源文件/程序
+> _debug: 调试用程序
+> _SB: 整活用
 # 编译命令
-所有程序都是用 VSCode 写的，以下是编译使用的 tasks.json 文件:
-## C++
+所有程序都是用 Visual Studio Code 写的，以下是编译使用的 tasks.json 文件:
 ```json
 {
     "tasks": [
         {
-            //适用于 Linux，最终发布的程序
             "type": "shell",
-            "label": "g++ 生成优化程序(.run)",
-            "command": "g++ -fdiagnostics-color=always -std=c++23 -O2 ${file} -o ${fileDirname}/${fileBasenameNoExtension}.run",
-            "options": {
-                "cwd": "~/Code/C++"
-            },
+            "label": "C 生成优化程序(.run)",
+            "command": "gcc -fdiagnostics-color=always -std=c23 -O2 ${file} -o ${fileDirname}/${fileBasenameNoExtension}.run",
             "problemMatcher": [
                 "$gcc"
             ],
@@ -22,9 +23,56 @@
             }
         },
         {
-            //适用于 Windows，最终发布的程序
             "type": "shell",
-            "label": "g++ 生成优化程序(.exe)",
+            "label": "C 生成优化程序(.exe)",
+            "command": "gcc -fdiagnostics-color=always -std=c23 -O2 ${file} -o ${fileDirname}\\${fileBasenameNoExtension}.exe",
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            }
+        },
+        {
+            "type": "shell",
+            "label": "C 生成可调试程序(.run)",
+            "command": "gcc -fdiagnostics-color=always -ggdb -std=c23 ${file} -o ${fileDirname}/${fileBasenameNoExtension}_debug.run",
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            }
+        },
+        {
+            "type": "shell",
+            "label": "C++ 生成可调试程序(.exe)",
+            "command": "gcc -fdiagnostics-color=always -ggdb -std=c23 ${file} -o ${fileDirname}\\${fileBasenameNoExtension}_debug.exe",
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            }
+        },
+        {
+            "type": "shell",
+            "label": "C++ 生成优化程序(.run)",
+            "command": "g++ -fdiagnostics-color=always -std=c++23 -O2 ${file} -o ${fileDirname}/${fileBasenameNoExtension}.run",
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            }
+        },
+        {
+            "type": "shell",
+            "label": "C++ 生成优化程序(.exe)",
             "command": "g++ -fdiagnostics-color=always -std=c++23 -O2 ${file} -o ${fileDirname}\\${fileBasenameNoExtension}.exe",
             "problemMatcher": [
                 "$gcc"
@@ -35,13 +83,9 @@
             }
         },
         {
-            //适用于 Linux，调试用程序
             "type": "shell",
-            "label": "g++ 生成可调试程序(.run)",
+            "label": "C++ 生成可调试程序(.run)",
             "command": "g++ -fdiagnostics-color=always -ggdb -std=c++23 ${file} -o ${fileDirname}/${fileBasenameNoExtension}_debug.run",
-            "options": {
-                "cwd": "~/Code/C++"
-            },
             "problemMatcher": [
                 "$gcc"
             ],
@@ -51,9 +95,8 @@
             }
         },
         {
-            //适用于 Windows，调试用程序，默认使用此任务
             "type": "shell",
-            "label": "g++ 生成可调试程序(.exe)",
+            "label": "C++ 生成可调试程序(.exe)",
             "command": "g++ -fdiagnostics-color=always -ggdb -std=c++23 ${file} -o ${fileDirname}\\${fileBasenameNoExtension}_debug.exe",
             "problemMatcher": [
                 "$gcc"
@@ -67,4 +110,3 @@
     "version": "2.0.0"
 }
 ```
-_以后还会添加其他语言的 tasks.json 文件_
