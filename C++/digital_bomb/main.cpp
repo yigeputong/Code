@@ -1,6 +1,5 @@
 #include <iostream>
 #include <random>
-
 using namespace std;  // 使用标准命名空间，以便直接使用其中的元素而无需前缀
 
 // 生成指定范围内的随机数
