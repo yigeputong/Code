@@ -1,7 +1,7 @@
 {
     "configurations": [
         {
-            "name": "(gdb) 启动(.run)",
+            "name": "C: (gdb) 启动(.run)",
             "type": "cppdbg",
             "request": "launch",
             "program": "${fileDirname}/${fileBasenameNoExtension}_debug.run",
@@ -27,7 +27,7 @@
             "preLaunchTask": "C 生成可调试程序(.run)"
         },
         {
-            "name": "(gdb) 启动(.exe)",
+            "name": "C: gdb) 启动(.exe)",
             "type": "cppdbg",
             "request": "launch",
             "program": "${fileDirname}\\${fileBasenameNoExtension}_debug.exe",
@@ -51,7 +51,7 @@
             "preLaunchTask": "C 生成可调试程序(.exe)"
         },
         {
-            "name": "(gdb) 启动(.run)",
+            "name": "C++: (gdb) 启动(.run)",
             "type": "cppdbg",
             "request": "launch",
             "program": "${fileDirname}/${fileBasenameNoExtension}_debug.run",
@@ -77,7 +77,7 @@
             "preLaunchTask": "C++ 生成可调试程序(.run)"
         },
         {
-            "name": "(gdb) 启动(.exe)",
+            "name": "C++: (gdb) 启动(.exe)",
             "type": "cppdbg",
             "request": "launch",
             "program": "${fileDirname}\\${fileBasenameNoExtension}_debug.exe",
