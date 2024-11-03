@@ -101,7 +101,7 @@
         //Python
         {
             "type": "shell",
-            "label": "Python运行程序",
+            "label": "Python 运行程序",
             "command": "python ${file}"
         }
     ],
