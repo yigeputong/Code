@@ -103,6 +103,10 @@
             "type": "shell",
             "label": "Python 运行程序",
             "command": "python ${file}"
+        },{
+            "type": "shell",
+            "label": "Python3 运行程序",
+            "command": "python3 ${file}"
         }
     ],
     "version": "2.0.0"
