@@ -1,3 +1,4 @@
+//C++
 #include <iostream>
 using namespace std;
 
@@ -5,7 +6,7 @@ int main()
 {
     //Code here
 
-    cerr << "Press Enter to continue... ";
+    cout << "Press Enter to exit... ";
     cin.get();
     return 0;
 }
