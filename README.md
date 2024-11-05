@@ -8,6 +8,7 @@
  * _debug: 调试用程序
  * _SB: 整活用
 # json文件
+[生成 Windows 程序使用的 MinGW 下载地址](https://github.com/skeeto/w64devkit/releases/tag/v2.0.0 "MinGW 下载地址")
 所有程序都是用 Visual Studio Code 写的，以下是使用的 json 文件:
 ## tasks.json
 ```json
