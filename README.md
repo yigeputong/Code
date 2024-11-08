@@ -9,6 +9,7 @@
  * _SB: 整活用
 # json文件
 [生成 Windows 程序使用的 MinGW 下载地址](https://github.com/skeeto/w64devkit/releases/tag/v2.0.0 "MinGW 下载地址")
+
 所有程序都是用 Visual Studio Code 写的，以下是使用的 json 文件:
 ## tasks.json
 ```json
@@ -132,10 +133,8 @@
             "type": "cppdbg",
             "request": "launch",
             "program": "${fileDirname}/${fileBasenameNoExtension}_debug.run",
-            "args": [],
             "stopAtEntry": false,
             "cwd": "${fileDirname}",
-            "environment": [],
             "externalConsole": false,
             "MIMode": "gdb",
             "miDebuggerPath": "/usr/bin/gdb",
@@ -162,7 +161,7 @@
             "cwd": "${fileDirname}",
             "externalConsole": false,
             "MIMode": "gdb",
-            "miDebuggerPath": "E:\\mingw64\\bin\\gdb.exe",
+            "miDebuggerPath": "D:\\Program\\MinGW\\bin\\gdb.exe",
             "setupCommands": [
                 {
                     "description": "为 gdb 启用整齐打印",
@@ -182,10 +181,8 @@
             "type": "cppdbg",
             "request": "launch",
             "program": "${fileDirname}/${fileBasenameNoExtension}_debug.run",
-            "args": [],
             "stopAtEntry": false,
             "cwd": "${fileDirname}",
-            "environment": [],
             "externalConsole": false,
             "MIMode": "gdb",
             "miDebuggerPath": "/usr/bin/gdb",
