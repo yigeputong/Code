@@ -77,11 +77,11 @@
             "preLaunchTask": "C++ 生成可调试程序(.run)"
         },
         {
-            "name": "C++: (gdb) 启动(.exe)",
+            "name": "C++.exe",
             "type": "cppdbg",
             "request": "launch",
             "program": "${fileDirname}\\${fileBasenameNoExtension}_debug.exe",
-            "stopAtEntry": false,
+            "stopAtEntry": true,
             "cwd": "${fileDirname}",
             "externalConsole": false,
             "MIMode": "gdb",
@@ -90,11 +90,6 @@
                 {
                     "description": "为 gdb 启用整齐打印",
                     "text": "-enable-pretty-printing",
-                    "ignoreFailures": true
-                },
-                {
-                    "description": "将反汇编风格设置为 Intel",
-                    "text": "-gdb-set disassembly-flavor intel",
                     "ignoreFailures": true
                 }
             ],

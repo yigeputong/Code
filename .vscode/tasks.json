@@ -98,15 +98,42 @@
                 "isDefault": true
             }
         },
-        //Python
+        //运行
         {
             "type": "shell",
             "label": "Python 运行程序",
-            "command": "python ${file}"
-        },{
+            "command": "python ${file}",
+            "group": {
+                "kind": "test",
+                "isDefault": false
+            }
+        },
+        {
             "type": "shell",
             "label": "Python3 运行程序",
-            "command": "python3 ${file}"
+            "command": "python3 ${file}",
+            "group": {
+                "kind": "test",
+                "isDefault": false
+            }
+        },
+        {
+            "type": "shell",
+            "label": "C++ 运行优化程序(.run)",
+            "command": "${fileDirname}/${fileBasenameNoExtension}.run",
+            "group": {
+                "kind": "test",
+                "isDefault": false
+            }
+        },
+        {
+            "type": "shell",
+            "label": "C++ 运行优化程序(.exe)",
+            "command": "${fileDirname}\\${fileBasenameNoExtension}.exe",
+            "group": {
+                "kind": "test",
+                "isDefault": false
+            }
         }
     ],
     "version": "2.0.0"
