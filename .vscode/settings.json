@@ -41,7 +41,7 @@
             "return": "",
         },
         // 生成的图案
-        // 是用 ctrl/command + shift + p 在输入图案名字来生成指定图案
+        // 使用 ctrl/command + shift + p 在输入 codeDesign- + 图案名字 来生成指定图案
         "fileheader.configObj": {
             "headDesign": false,
             "headDesignName": "random" // 默认为随机图案
