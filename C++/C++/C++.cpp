@@ -26,10 +26,10 @@
 
 //C++
 #include <iostream>
+
 using namespace std;
 
-int main()
-{
+int main() {
     //Code here
 
     cout << "Press Enter to exit... ";
