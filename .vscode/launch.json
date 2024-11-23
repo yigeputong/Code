@@ -4,7 +4,7 @@
             "name": "C.run",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/Debug/C/${fileDirname}_debug.run",
+            "program": "${workspaceFolder}/Debug/C/${fileBasenameNoExtension}_debug.run",
             "stopAtEntry": false,
             "cwd": "${fileDirname}",
             "externalConsole": false,
@@ -15,11 +15,6 @@
                     "description": "为 gdb 启用整齐打印",
                     "text": "-enable-pretty-printing",
                     "ignoreFailures": true
-                },
-                {
-                    "description": "将反汇编风格设置为 Intel",
-                    "text": "-gdb-set disassembly-flavor intel",
-                    "ignoreFailures": true
                 }
             ],
             "preLaunchTask": "C 生成可调试程序(.run)"
@@ -28,7 +23,7 @@
             "name": "C.exe",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}\\Debug\\C\\${fileDirname}_debug.run",
+            "program": "${workspaceFolder}\\Debug\\C\\${fileBasenameNoExtension}_debug.run",
             "stopAtEntry": false,
             "cwd": "${fileDirname}",
             "externalConsole": false,
@@ -39,11 +34,6 @@
                     "description": "为 gdb 启用整齐打印",
                     "text": "-enable-pretty-printing",
                     "ignoreFailures": true
-                },
-                {
-                    "description": "将反汇编风格设置为 Intel",
-                    "text": "-gdb-set disassembly-flavor intel",
-                    "ignoreFailures": true
                 }
             ],
             "preLaunchTask": "C 生成可调试程序(.exe)"
@@ -52,7 +42,7 @@
             "name": "C++.run",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/Debug/C++/${fileDirname}_debug.run",
+            "program": "${workspaceFolder}/Debug/C++/${fileBasenameNoExtension}_debug.run",
             "stopAtEntry": false,
             "cwd": "${fileDirname}",
             "externalConsole": false,
@@ -63,11 +53,6 @@
                     "description": "为 gdb 启用整齐打印",
                     "text": "-enable-pretty-printing",
                     "ignoreFailures": true
-                },
-                {
-                    "description": "将反汇编风格设置为 Intel",
-                    "text": "-gdb-set disassembly-flavor intel",
-                    "ignoreFailures": true
                 }
             ],
             "preLaunchTask": "C++ 生成可调试程序(.run)"
@@ -76,7 +61,7 @@
             "name": "C++.exe",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}\\Debug\\C++\\${fileDirname}_debug.run",
+            "program": "${workspaceFolder}\\Debug\\C++\\${fileBasenameNoExtension}_debug.run",
             "stopAtEntry": true,
             "cwd": "${fileDirname}",
             "externalConsole": false,

@@ -4,98 +4,74 @@
         {
             "type": "shell",
             "label": "C 生成优化程序(.run)",
-            "command": "gcc -fdiagnostics-color=always -std=c23 -O2 ${file} -o ${workspaceFolder}/Programs/C/${fileDirname}.run",
-            "problemMatcher": [
-                "$gcc"
-            ],
+            "command": "gcc -fdiagnostics-color=always -std=c23 -O2 ${file} -o ${workspaceFolder}/Programs/C/${fileBasenameNoExtension}.run",
+            "problemMatcher": ["$gcc"],
             "group": {
-                "kind": "build",
-                "isDefault": false
+                "kind": "build"
             }
         },
         {
             "type": "shell",
             "label": "C 生成优化程序(.exe)",
-            "command": "gcc -fdiagnostics-color=always -std=c23 -O2 ${file} -o ${workspaceFolder}\\Programs\\C\\${fileDirname}.exe",
-            "problemMatcher": [
-                "$gcc"
-            ],
+            "command": "gcc -fdiagnostics-color=always -std=c23 -O2 ${file} -o ${workspaceFolder}\\Programs\\C\\${fileBasenameNoExtension}.exe",
+            "problemMatcher": ["$gcc"],
             "group": {
-                "kind": "build",
-                "isDefault": false
+                "kind": "build"
             }
         },
         {
             "type": "shell",
             "label": "C 生成可调试程序(.run)",
-            "command": "gcc -fdiagnostics-color=always -ggdb -std=c23 ${file} -o ${workspaceFolder}/Debug/C/${fileDirname}_debug.run",
-            "problemMatcher": [
-                "$gcc"
-            ],
+            "command": "gcc -fdiagnostics-color=always -ggdb -std=c23 -O0 ${file} -o ${workspaceFolder}/Debug/C/${fileBasenameNoExtension}_debug.run",
+            "problemMatcher": ["$gcc"],
             "group": {
-                "kind": "build",
-                "isDefault": false
+                "kind": "build"
             }
         },
         {
             "type": "shell",
             "label": "C 生成可调试程序(.exe)",
-            "command": "gcc -fdiagnostics-color=always -ggdb -std=c23 ${file} -o ${workspaceFolder}\\Debug\\C\\${fileDirname}_debug.exe",
-            "problemMatcher": [
-                "$gcc"
-            ],
+            "command": "gcc -fdiagnostics-color=always -ggdb -std=c23 -O0 ${file} -o ${workspaceFolder}\\Debug\\C\\${fileBasenameNoExtension}_debug.exe",
+            "problemMatcher": ["$gcc"],
             "group": {
-                "kind": "build",
-                "isDefault": false
+                "kind": "build"
             }
         },
         //C++
         {
             "type": "shell",
             "label": "C++ 生成优化程序(.run)",
-            "command": "g++ -fdiagnostics-color=always -std=c++23 -O2 ${file} -o ${workspaceFolder}/Programs/C++/${fileDirname}.run",
-            "problemMatcher": [
-                "$gcc"
-            ],
+            "command": "g++ -fdiagnostics-color=always -std=c++23 -O2 ${file} -o ${workspaceFolder}/Programs/C++/${fileBasenameNoExtension}.run",
+            "problemMatcher": ["$gcc"],
             "group": {
-                "kind": "build",
-                "isDefault": false
+                "kind": "build"
             }
         },
         {
             "type": "shell",
             "label": "C++ 生成优化程序(.exe)",
-            "command": "g++ -fdiagnostics-color=always -std=c++23 -O2 ${file} -o ${workspaceFolder}\\Programs\\C++\\${fileDirname}.exe",
-            "problemMatcher": [
-                "$gcc"
-            ],
+            "command": "g++ -fdiagnostics-color=always -std=c++23 -O2 ${file} -o ${workspaceFolder}\\Programs\\C++\\${fileBasenameNoExtension}.exe",
+            "problemMatcher": ["$gcc"],
             "group": {
-                "kind": "build",
-                "isDefault": false
+                "kind": "build"
             }
         },
         {
             "type": "shell",
             "label": "C++ 生成可调试程序(.run)",
-            "command": "g++ -fdiagnostics-color=always -ggdb -std=c++23 ${file} -o ${workspaceFolder}/Debug/C++${fileDirname}_debug.run",
-            "problemMatcher": [
-                "$gcc"
-            ],
+            "command": "g++ -fdiagnostics-color=always -ggdb -std=c++23 -O0 ${file} -o ${workspaceFolder}/Debug/C++/${fileBasenameNoExtension}_debug.run",
+            "problemMatcher": ["$gcc"],
             "group": {
-                "kind": "build",
-                "isDefault": false
+                "kind": "build"
             }
         },
         {
             "type": "shell",
             "label": "C++ 生成可调试程序(.exe)",
-            "command": "g++ -fdiagnostics-color=always -ggdb -std=c++23 ${file} -o ${workspaceFolder}\\Debug\\C++\\${fileDirname}_debug.exe",
-            "problemMatcher": [
-                "$gcc"
-            ],
+            "command": "g++ -fdiagnostics-color=always -ggdb -std=c++23 -O0 ${file} -o ${workspaceFolder}\\Debug\\C++\\${fileBasenameNoExtension}_debug.exe",
+            "problemMatcher": ["$gcc"],
             "group": {
-                "kind": "build",
-                "isDefault": true
+                "kind": "build"
             }
         },
         //运行
@@ -104,8 +80,7 @@
             "label": "Python 运行程序",
             "command": "python ${file}",
             "group": {
-                "kind": "test",
-                "isDefault": false
+                "kind": "test"
             }
         },
         {
@@ -113,26 +88,23 @@
             "label": "Python3 运行程序",
             "command": "python3 ${file}",
             "group": {
-                "kind": "test",
-                "isDefault": false
+                "kind": "test"
             }
         },
         {
             "type": "shell",
             "label": "C++ 运行优化程序(.run)",
-            "command": "${workspaceFolder}/Programs/C++/${fileDirname}.run",
+            "command": "${workspaceFolder}/Programs/C++/${fileBasenameNoExtension}.run",
             "group": {
-                "kind": "test",
-                "isDefault": false
+                "kind": "test"
             }
         },
         {
             "type": "shell",
             "label": "C++ 运行优化程序(.exe)",
-            "command": "${workspaceFolder}\\Programs\\C++\\${fileDirname}.exe",
+            "command": "${workspaceFolder}\\Programs\\C++\\${fileBasenameNoExtension}.exe",
             "group": {
-                "kind": "test",
-                "isDefault": false
+                "kind": "test"
             }
         }
     ],
