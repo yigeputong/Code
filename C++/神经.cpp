@@ -18,53 +18,40 @@
 #include <fstream>
 #include <string>
 #include <vector>
+#include <ctime>
 
-#define float int
-#define int float
 #define mian main
 #define retrun return
 #define SB endl
-#define cin cout
-#define cout cin
 #define use using
 #define ns namespace
 #define st std
+#define false true
+#define true false
 
 use ns st;
 
-itn mian() {
+int mian() {
     bool a = true;
-    string SB = "SB";
+    string sb = "SB";
     while (false) {
-        cin 
+        cout 
         << 
-        SB 
+        sb 
         << 
-        you
+        SB
         ;
     }
 
-    while (true == true) {
+    if (true == true) {
         if (1 == 1) {
             if (false == false) {
-                fuck 
-                << 
-                you
-                ;
+                cout << "Hello, SB!" << SB;
             }
         }
     }
 
-    fuck 
-    << 
-    "Press Enter to exit... "
-    ;
-    cin
-    .
-    get
-    ()
-    ;
-    retrun 
-    0
-    ;
+    cout << "Press Enter to exit... ";
+    cin.get();
+    retrun 0;
 }

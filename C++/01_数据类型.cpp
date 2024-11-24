@@ -30,6 +30,9 @@ int main() {
     int a = 10;
     cout << "a 变量占用的内存为：" << sizeof(a) << endl;
 
+    char b = 'b';
+    cout << b << endl;
+
     cout << "Press Enter to exit... ";
     cin.get();
     return 0;

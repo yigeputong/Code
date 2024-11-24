@@ -159,15 +159,97 @@ int main() {
 	
 	{//循环结构
 		{//while
-			//while 的语法：
-			//while (条件) {
+			// while 的语法：
+			// while (条件) {
 			//    条件为 true 时执行的代码
-			//}
-			//条件如果为 true 就是死循环
+			// }
+			// 条件如果为 true 就是死循环
 			int num = 0;
-			while ( num < 10 ) {
+			int count = 0;
+			cout << "输入一个正整数：";
+			cin >> count;
+			while ( num < count ) {
 				cout << num++ << endl;
 			}
+		}
+
+		
+		{//do while
+			// do while 的语法：
+			// do {
+			// 	//条件为 true 时执行的代码(至少执行一次)
+			// } while (条件);
+			// do while 与 while 的区别在于 do while 会先执行一次循环体，再判断条件是否为 true
+			// 尽管条件一开始就是 false , 那也会至少执行一次循环体
+			int num = 0;
+			int count = 0;
+			cout << "输入一个正整数：";
+			cin >> count;
+			do {
+				cout << num++ << endl;
+			} while ( num < count );
+		}
+
+		{//for
+			// for 的语法：
+			// for (初始表达式; 条件; 末尾表达式) {
+			//    条件为 true 时执行的代码
+			// }
+			// 初始表达式：在循环开始前执行一次
+			// 条件：在每次循环开始前执行一次，判断是否为 true
+			// 末尾表达式：在每次循环结束后执行一次
+			// 初始表达式、条件、末尾表达式都可以省略，但是分号不能省略
+			for (int i = 0; i < 10; i++) {
+				cout << i << endl;
+			}
+			// 输出0-9
+		}
+
+		{//嵌套循环
+			//嵌套循环就是在一个循环中再嵌套一个或多个循环，来解决一些问题，一般是用两个 for 循环来解决
+			for (int i = 0; i < 10; i++) {
+				for (int j = 0; j < 10; j++) {
+					cout << "*" << " " << endl;
+				}
+				cout << endl;
+			}
+		}
+	}
+
+	{//跳转语句
+		{//break
+			//break 的作用是跳出当前循环，执行循环后面的代码
+			for (int i = 0; i < 10; i++) {
+				if (i == 5) {
+					break;
+				}
+				cout << i << endl;
+			}
+			// 输出0-4
+		}
+
+		{//continue
+			//continue 的作用是跳过当前循环，执行下一次循环
+			for (int i = 0; i < 10; i++) {
+				if (i == 5) {
+					continue;
+				}
+				cout << i << endl;
+			}
+			// 输出0-4, 6-9
+		}
+
+		{//goto
+			//goto 的作用是跳转到指定的标签处，执行标签后面的代码
+			//goto 语句的使用要谨慎，因为它会导致代码的可读性变差，而且容易出现错误
+			//goto 语句的标签可以是任何合法的 C++ 标识符，标识符后面加上一个冒号，比如:
+			// a:
+			//goto 语句的标签可以在任何地方使用，但是标签后面的代码必须在标签前面
+			goto a;
+			cout << "Hello World!" << endl;
+			a:
+			cout << "Hello C++!" << endl;
+			// 输出Hello C++!
 		}
 	}
 

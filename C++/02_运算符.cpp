@@ -62,10 +62,10 @@ int main() {
 
     /**
      * 以下是逻辑运算符：
-     * 符号 名称        示例        结果
-     * &&   与          1 && 1      true
-     * ||   或          1 || 1      true
-     * !    非          !(1 == 1)   false
+     * 符号 名称    示例             结果
+     * &&   与      true && true    true
+     * ||   或      true || false   true
+     * !    非      !(true)         false
     **/
 
     bool h = true && false; //h为false
