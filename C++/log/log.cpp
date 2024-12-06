@@ -3,16 +3,16 @@
 #include "log.h"
 using namespace std;
 
-int Out_log(int loglevel, string logmessage)
+int Out_log(int oglevel, string ogmessage)
 {
     system("chcp 65001");
 
-    if (loglevel == 0 && logmessage == "")
+    if (loglevel == 0 && ogmessage == "")
     {
         cout << "ERR_NO_INPUT" << endl;
         return 1;
     }
-    if (loglevel > 2 && loglevel < 0)
+    if (loglevel > 2 && oglevel < 0)
     {
         cout << "ERR_INPUT_ERROR" << endl;
         return 2;
@@ -20,16 +20,16 @@ int Out_log(int loglevel, string logmessage)
     switch (loglevel)
     {
     case 0:
-        cout << "ERROR: " << logmessage << endl;
+        cout << "ERROR: " << ogmessage << endl;
         break;
     case 1:
-        cout << "WARNING: " << logmessage << endl;
+        cout << "WARNING: " << ogmessage << endl;
         break;
     case 2:
-        cout << "INFO: " << logmessage << endl;
+        cout << "INFO: " << ogmessage << endl;
         break;
     default:
-        cout << "INFO: " << logmessage << endl;
+        cout << "INFO: " << ogmessage << endl;
         break;
    }
 

@@ -5,8 +5,6 @@ using namespace std;
 
 int main() {
 
-	system("chcp 65001");
-
     /**
 	 * C++ 支持基本的三种程序流程结构
 	 * 顺序结构：程序按顺序执行，不发生跳转
@@ -245,11 +243,10 @@ int main() {
 			//goto 语句的标签可以是任何合法的 C++ 标识符，标识符后面加上一个冒号，比如:
 			// a:
 			//goto 语句的标签可以在任何地方使用，但是标签后面的代码必须在标签前面
-			goto a;
-			cout << "Hello World!" << endl;
 			a:
+			cout << "Hello World!" << endl;
+			if (false) goto a;
 			cout << "Hello C++!" << endl;
-			// 输出Hello C++!
 		}
 	}
 

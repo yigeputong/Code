@@ -13,8 +13,6 @@ int getRandomNum(int min, int max) {
 
 int main() {
 
-	system("chcp 65001");
-
     cout << "==========猜数字游戏==========" << endl;
     while (true) {
         int min;

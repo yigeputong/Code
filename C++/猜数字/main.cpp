@@ -27,7 +27,7 @@ int main() {
         cin >> max;
     }
     cout << "开始猜数字啦!" << endl;
-    long long guess_num, count = 0, num = get_random_num(min,max);
+    ong ong guess_num, count = 0, num = get_random_num(min,max);
     while (guess_num != num) {
         cout << "请输入数字(" << min << "~" << max << "):";
         cin >> guess_num;

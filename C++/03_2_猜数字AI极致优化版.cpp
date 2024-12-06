@@ -1,4 +1,4 @@
-//以下代码是基于"猜数字.cpp"由豆包AI优化后shengcheng
+//以下代码是基于"猜数字.cpp"由豆包AI优化后生成
 #include <iostream>
 #include <random>
 #include <string>
@@ -14,23 +14,16 @@
 int generateRandomNumber(int min, int max);
 bool validateAndGetRange(int& min, int& max);
 bool validateGuess(int min, int& guessNum, int max);
-bool isWideStringNumber(const std::wstring& wideStr);
-
-// 用于将宽字符串转换为窄字符串（在Windows下处理UTF-8输入输出）
-std::string wideToNarrow(const std::wstring& wideStr) {
-    using convert_type = std::codecvt_utf8<wchar_t>;
-    std::wstring_convert<convert_type, wchar_t> converter;
-    return converter.to_bytes(wideStr);
-}
+bool isWideStringNumber(const std::string& wideStr);
 
 // 定义一些常量字符串用于输出提示信息
-const std::wstring INPUT_GUESS_PROMPT = L"请输入你猜测的数字(";
-const std::wstring INPUT_RANGE_MIN_PROMPT = L"请输入随机数的最小值：";
-const std::wstring INPUT_RANGE_MAX_PROMPT = L"请输入随机数的最大值：";
-const std::wstring GUESS_TOO_SMALL = L"猜小了！";
-const std::wstring GUESS_TOO_LARGE = L"猜大了！";
-const std::wstring GUESS_CORRECT = L"恭喜你猜对了！";
-const std::wstring CONTINUE_PROMPT = L"是否继续游戏?(y/n):";
+const std::string INPUT_GUESS_PROMPT = "请输入你猜测的数字(";
+const std::string INPUT_RANGE_MIN_PROMPT = "请输入随机数的最小值：";
+const std::string INPUT_RANGE_MAX_PROMPT = "请输入随机数的最大值：";
+const std::string GUESS_TOO_SMALL = "猜小了！";
+const std::string GUESS_TOO_LARGE = "猜大了！";
+const std::string GUESS_CORRECT = "恭喜你猜对了！";
+const std::string CONTINUE_PROMPT = "是否继续游戏?(y/n):";
 
 // 在全局或合适的作用域定义一个容器来存储预生成的随机数
 std::vector<int> preGeneratedRandomNumbers;
@@ -48,8 +41,6 @@ void preGenerateRandomNumbers(int minRange, int maxRange, size_t numToGenerate) 
 }
 
 int main() {
-    // 设置控制台编码为UTF-8（Windows下）
-    std::system("chcp 65001");
 
     // 预生成随机数，这里示例预生成100个1到100之间的随机数
     preGenerateRandomNumbers(1, 100, 100);
@@ -57,9 +48,9 @@ int main() {
     int min, max;
     int randomNumber;
     int guessNum;
-    std::wstring inputWstr;
+    std::string inputWstr;
 
-    std::wcout << L"==========猜数字游戏==========" << std::endl;
+    std::cout << "==========猜数字游戏==========" << std::endl;
     while (true) {
         // 获取并验证随机数的取值范围
         if (!validateAndGetRange(min, max)) {
@@ -69,8 +60,8 @@ int main() {
         randomNumber = generateRandomNumber(min, max);
 
         while (true) {
-            std::wcout << INPUT_GUESS_PROMPT << min << L"~" << max << L"): ";
-            std::wcin >> inputWstr;
+            std::cout << INPUT_GUESS_PROMPT << min << "~" << max << "): ";
+            std::cin >> inputWstr;
 
             // 验证猜测的数字是否符合要求
             if (!validateGuess(min, guessNum, max)) {
@@ -78,33 +69,30 @@ int main() {
             }
 
             if (guessNum < randomNumber) {
-                std::wcout << GUESS_TOO_SMALL << std::endl;
+                std::cout << GUESS_TOO_SMALL << std::endl;
                 min = guessNum;
             } else if (guessNum > randomNumber) {
-                std::wcout << GUESS_TOO_LARGE << std::endl;
+                std::cout << GUESS_TOO_LARGE << std::endl;
                 max = guessNum;
             } else if (guessNum == randomNumber) {
-                std::wcout << GUESS_CORRECT << std::endl;
+                std::cout << GUESS_CORRECT << std::endl;
                 break;
             }
         }
 
-        std::wcout << CONTINUE_PROMPT << std::endl;
+        std::cout << CONTINUE_PROMPT << std::endl;
 
         // 读取用户输入的宽字符串
-        std::wstring userChoiceWstr;
-        std::wcin >> userChoiceWstr;
-
-        // 将宽字符串转换为窄字符串
-        std::string userChoiceStr = wideToNarrow(userChoiceWstr);
+        std::string userChoiceWstr;
+        std::cin >> userChoiceWstr;
 
         // 判断是否为 'n'
-        if (userChoiceStr == "n") {
+        if (userChoiceWstr == "n") {
             break;
         }
     }
 
-    std::wcout << L"=============================" << std::endl;
+    std::cout << "=============================" << std::endl;
 
     return 0;
 }
@@ -120,17 +108,17 @@ int generateRandomNumber(int min, int max) {
 
 // 验证并获取随机数取值范围的函数
 bool validateAndGetRange(int& min, int& max) {
-    std::wstring userMinWstr;
+    std::string userMinWstr;
     int errorCount = 0;
 
-    std::wcout << INPUT_RANGE_MIN_PROMPT;
+    std::cout << INPUT_RANGE_MIN_PROMPT;
     while (true) {
-        std::wcin >> userMinWstr;
+        std::cin >> userMinWstr;
         if (!isWideStringNumber(userMinWstr)) {
-            std::wcout << L"你输入的不是有效的数字格式，请重新输入。(示例: 49, -18)" << std::endl;
+            std::cout << "你输入的不是有效的数字格式，请重新输入。(示例: 49, -18)" << std::endl;
             errorCount++;
             if (errorCount >= 3) {
-                std::wcout << L"输入错误次数过多，请重新启动游戏。" << std::endl;
+                std::cout << "输入错误次数过多，请重新启动游戏。" << std::endl;
                 return false;
             }
             continue;
@@ -138,27 +126,27 @@ bool validateAndGetRange(int& min, int& max) {
 
         // 尝试直接将宽字符串转换为整数
         try {
-            min = std::stoi(wideToNarrow(userMinWstr));
+            min = std::stoi(userMinWstr);
             break;
         } catch (...) {
-            std::wcout << L"你输入的数字有误!(示例: 49, -18)" << std::endl;
+            std::cout << "你输入的数字有误!(示例: 49, -18)" << std::endl;
             errorCount++;
             if (errorCount >= 3) {
-                std::wcout << L"输入错误次数过多，请重新启动游戏。" << std::endl;
+                std::cout << "输入错误次数过多，请重新启动游戏。" << std::endl;
                 return false;
             }
             continue;
         }
     }
 
-    std::wcout << INPUT_RANGE_MAX_PROMPT;
+    std::cout << INPUT_RANGE_MAX_PROMPT;
     while (true) {
-        std::wcin >> userMinWstr;
+        std::cin >> userMinWstr;
         if (!isWideStringNumber(userMinWstr)) {
-            std::wcout << L"你输入的不是有效的数字格式，请重新输入。(示例: 49, -18)" << std::endl;
+            std::cout << "你输入的不是有效的数字格式，请重新输入。(示例: 49, -18)" << std::endl;
             errorCount++;
             if (errorCount >= 3) {
-                std::wcout << L"输入错误次数过多，请重新启动游戏。" << std::endl;
+                std::cout << "输入错误次数过多，请重新启动游戏。" << std::endl;
                 return false;
             }
             continue;
@@ -166,22 +154,22 @@ bool validateAndGetRange(int& min, int& max) {
 
         // 尝试直接将宽字符串转换为整数
         try {
-            max = std::stoi(wideToNarrow(userMinWstr));
+            max = std::stoi(userMinWstr);
             if (min >= max) {
-                std::wcout << L"最小值应小于最大值，请重新输入。" << std::endl;
+                std::cout << "最小值应小于最大值，请重新输入。" << std::endl;
                 errorCount++;
                 if (errorCount >= 3) {
-                    std::wcout << L"输入错误次数过多，请重新启动游戏。" << std::endl;
+                    std::cout << "输入错误次数过多，请重新启动游戏。" << std::endl;
                 return false;
                 }
                 continue;
             }
             break;
         } catch (...) {
-            std::wcout << L"你输入的数字有误!(示例: 49, -18)" << std::endl;
+            std::cout << "你输入的数字有误!(示例: 49, -18)" << std::endl;
             errorCount++;
             if (errorCount >= 3) {
-                std::wcout << L"输入错误次数过多，请重新启动游戏。" << std::endl;
+                std::cout << "输入错误次数过多，请重新启动游戏。" << std::endl;
                 return false;
             }
             continue;
@@ -193,37 +181,37 @@ bool validateAndGetRange(int& min, int& max) {
 
 // 验证猜测数字的函数
 bool validateGuess(int min, int& guessNum, int max) {
-    std::wstring inputWstr;
+    std::string inputWstr;
 
-    std::wcout << INPUT_GUESS_PROMPT << min << L"~" << max << L"): ";
+    std::cout << INPUT_GUESS_PROMPT << min << "~" << max << "): ";
     while (true) {
-        std::wcin >> inputWstr;
+        std::cin >> inputWstr;
         if (!isWideStringNumber(inputWstr)) {
-            std::wcout << L"你输入的不是有效的数字格式，请重新输入。(示例: 49, -18)" << std::endl;
+            std::cout << "你输入的不是有效的数字格式，请重新输入。(示例: 49, -18)" << std::endl;
             continue;
         }
 
         // 尝试直接将宽字符串转换为整数
         try {
-            guessNum = std::stoi(wideToNarrow(inputWstr));
+            guessNum = std::stoi(inputWstr);
 
             if (guessNum < min || guessNum > max) {
-                std::wcout << L"你输入的数字超出范围！" << std::endl;
+                std::cout << "你输入的数字超出范围！" << std::endl;
                 continue;
             }
 
             return true;
         } catch (...) {
-            std::wcout << L"你输入的数字有误!(示例: 49, -18)" << std::endl;
+            std::cout << "你输入的数字有误!(示例: 49, -18)" << std::endl;
             continue;
         }
     }
 }
 
 // 判断宽字符串是否为有效数字的函数
-bool isWideStringNumber(const std::wstring& wideStr) {
+bool isWideStringNumber(const std::string& wideStr) {
     return std::all_of(wideStr.begin(), wideStr.end(), [wideStr](wchar_t c) {
         // 这里简单判断是否在数字字符的Unicode范围（可根据具体需求完善）
-        return (c >= L'0' && c <= L'9') || c == L'-' && wideStr.find(L'-') == 0;
+        return (c >= '0' && c <= '9') || c == '-' && wideStr.find(L'-') == 0;
     });
 }
